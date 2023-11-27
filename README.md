@@ -1,4 +1,18 @@
-# io.finnet
+# Project Highlights [short-description]
+Project is organised into three directories in root directory. ```s3-cloudfront-*``` directory is the module code for creating s3 and cloudfront distributions for each of the environments ```[dev,stage,prod]``` where as env folder consits of call to the modules. This env directory is organised in a way to separate parallel envs in folders hence having sub dir/ for each environment. 
+
+Run terraform init/plan/apply
+---
+
+```/> cd to root/ dir```<br />
+```/> terraform init```<br />
+```/> terraform plan ```<br />
+```/> terraform apply -auto-approve```<br />
+
+# Project Specifics [different-scenarios]
+
+In case if only one of the environments need to be deployed, then the code within the ```"env/"``` directory needs to be commented out for the other environments, say we want to deploy only for ```"dev"``` env, then tf module for ```"stage/"``` and ```"prod/"``` along with the ```"main.tf"``` file in the ```"root/"``` dir should be commented out and not considered!  
+
 io.finnet - DevOps Exercise
 ---
 Terraform Assessment
